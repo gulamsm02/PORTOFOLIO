@@ -1,11 +1,18 @@
 <?php
 
-// Pindahkan folder storage ke /tmp agar bisa ditulisi (Writeable)
-foreach (['framework/views', 'framework/cache', 'framework/sessions', 'logs'] as $dir) {
-    if (!is_dir('/tmp/storage/' . $dir)) {
-        mkdir('/tmp/storage/' . $dir, 0755, true);
+// Pastikan folder storage ada di /tmp agar tidak error Read-Only
+$storageDirs = [
+    '/tmp/storage/framework/views',
+    '/tmp/storage/framework/cache',
+    '/tmp/storage/framework/sessions',
+    '/tmp/storage/logs',
+];
+
+foreach ($storageDirs as $dir) {
+    if (!is_dir($dir)) {
+        mkdir($dir, 0755, true);
     }
 }
 
-// Load aplikasi Laravel
+// Panggil index Laravel asli
 require __DIR__ . '/../public/index.php';

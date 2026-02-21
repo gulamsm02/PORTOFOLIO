@@ -36,6 +36,26 @@
                     </li>
                 </ul>
             </nav>
+
+            <div class="md:hidden flex items-center">
+                <button id="hamburger" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="nav-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-slate-800 absolute w-full left-0 transition-all duration-300 shadow-2xl">
+            <div class="flex flex-col px-6 py-8 space-y-6">
+                <a href="/" class="text-lg font-medium text-slate-200 hover:text-white {{ Request::is('/') ? 'text-indigo-400' : '' }}">Beranda</a>
+                <a href="/about" class="text-lg font-medium text-slate-200 hover:text-white {{ Request::is('about') ? 'text-indigo-400' : '' }}">Tentang</a>
+                <a href="/projects" class="text-lg font-medium text-slate-200 hover:text-white {{ Request::is('projects') ? 'text-indigo-400' : '' }}">Proyek</a>
+                <hr class="border-slate-800">
+                <a href="/contact" class="w-full py-4 bg-indigo-600 text-white rounded-xl font-bold text-center shadow-lg shadow-indigo-500/20">
+                    Kontak Saya
+                </a>
+            </div>
         </div>
     </header>
 
@@ -52,6 +72,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const btn = document.getElementById('hamburger');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('nav-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            
+            // Logika ganti icon dari hamburger ke silang (X)
+            if (menu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+    </script>
 
 </body>
 </html>

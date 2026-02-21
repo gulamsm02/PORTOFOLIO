@@ -1,23 +1,7 @@
 <?php
 
-// 1. Arahkan folder storage ke /tmp (satu-satunya tempat writable di Vercel)
-$storagePath = '/tmp/storage';
-$dirs = [
-    $storagePath . '/framework/views',
-    $storagePath . '/framework/cache',
-    $storagePath . '/framework/sessions',
-    $storagePath . '/logs',
-];
+// Arahkan storage ke folder temporary Vercel
+putenv('APP_STORAGE=/tmp/storage');
 
-foreach ($dirs as $dir) {
-    if (!is_dir($dir)) {
-        mkdir($dir, 0755, true);
-    }
-}
-
-// 2. Set environment variable secara runtime untuk memastikan Laravel menggunakannya
-putenv("VIEW_COMPILED_PATH=$storagePath/framework/views");
-$_ENV['VIEW_COMPILED_PATH'] = "$storagePath/framework/views";
-
-// 3. Panggil file index asli Laravel
+// Panggil file index Laravel yang asli di folder public
 require __DIR__ . '/../public/index.php';

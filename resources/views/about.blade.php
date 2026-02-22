@@ -50,18 +50,9 @@
                     </div>
 
                     <div class="grid grid-cols-3 gap-8 mt-12 border-t border-slate-100 pt-12 text-center">
-                        <div class="group cursor-default">
-                            <span class="block text-3xl font-extrabold text-indigo-600 group-hover:scale-110 transition-transform">10+</span>
-                            <span class="text-xs text-slate-400 font-bold uppercase tracking-widest">Projects</span>
-                        </div>
-                        <div class="group cursor-default border-x border-slate-100">
-                            <span class="block text-3xl font-extrabold text-indigo-600 group-hover:scale-110 transition-transform">3.91</span>
-                            <span class="text-xs text-slate-400 font-bold uppercase tracking-widest">GPA Index</span>
-                        </div>
-                        <div class="group cursor-default">
-                            <span class="block text-3xl font-extrabold text-indigo-600 group-hover:scale-110 transition-transform">1+</span>
-                            <span class="text-xs text-slate-400 font-bold uppercase tracking-widest">Years Exp.</span>
-                        </div>
+                        <div class="group"><span class="block text-3xl font-extrabold text-indigo-600 group-hover:scale-110 transition-transform">10+</span><span class="text-xs text-slate-400 font-bold uppercase tracking-widest">Projects</span></div>
+                        <div class="group border-x border-slate-100"><span class="block text-3xl font-extrabold text-indigo-600 group-hover:scale-110 transition-transform">3.91</span><span class="text-xs text-slate-400 font-bold uppercase tracking-widest">GPA Index</span></div>
+                        <div class="group"><span class="block text-3xl font-extrabold text-indigo-600 group-hover:scale-110 transition-transform">2+</span><span class="text-xs text-slate-400 font-bold uppercase tracking-widest">Years Exp.</span></div>
                     </div>
                 </div>
             </div>
@@ -76,16 +67,16 @@
             </div>
 
             @php
-                // Semua nama file image diubah ke huruf kecil agar sinkron dengan production
+                // Nama file disesuaikan persis dengan foto aset Anda (case-sensitive)
                 $certs = [
                     [
                         'id' => 'mapres',
                         'title' => 'Student With Best Academic Achievement',
                         'org' => 'Univ. Gunadarma',
                         'year' => '2021',
-                        'image' => 'mapres.png', 
-                        'description' => 'Penghargaan atas pencapaian akademik terbaik di tingkat universitas pada semester kedua.',
-                        'skills' => ['Academic Excellence', 'Public Speaking', 'Analytical Thinking']
+                        'image' => 'mapres.png',
+                        'description' => 'Penghargaan atas pencapaian akademik terbaik di tingkat universitas.',
+                        'skills' => ['Academic Excellence', 'Public Speaking']
                     ],
                     [
                         'id' => 'qa_sdlc',
@@ -93,8 +84,8 @@
                         'org' => 'MySkill',
                         'year' => 'Jun 2025',
                         'image' => 'sdlc.png',
-                        'description' => 'Sertifikasi profesional mengenai peran dan implementasi QA dalam setiap tahapan pengembangan software (SDLC).',
-                        'skills' => ['Quality Assurance', 'SDLC', 'Test Planning']
+                        'description' => 'Sertifikasi profesional mengenai peran QA dalam tahapan SDLC.',
+                        'skills' => ['Quality Assurance', 'SDLC']
                     ],
                     [
                         'id' => 'qa_fun',
@@ -102,16 +93,16 @@
                         'org' => 'MySkill',
                         'year' => 'Jun 2025',
                         'image' => 'fundamental.png',
-                        'description' => 'Pemahaman mendasar mengenai metodologi pengujian, pelaporan bug, dan penjaminan kualitas produk digital.',
-                        'skills' => ['Manual Testing', 'Bug Reporting', 'Test Case Design']
+                        'description' => 'Pemahaman mendasar mengenai metodologi pengujian dan pelaporan bug.',
+                        'skills' => ['Manual Testing', 'Bug Reporting']
                     ],
                     [
                         'id' => 'revou',
                         'title' => 'Data & Software Engineering',
                         'org' => 'RevoU',
                         'year' => 'Des 2023',
-                        'image' => 'revou.png',
-                        'description' => 'Program intensif yang mencakup pengembangan software modern dan manajemen infrastruktur data.',
+                        'image' => 'revoU.png', 
+                        'description' => 'Program intensif pengembangan software modern dan manajemen data.',
                         'skills' => ['HTML', 'CSS', 'Java']
                     ]
                 ];
@@ -120,7 +111,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 @foreach($certs as $cert)
                 <div class="group p-8 bg-white border border-slate-100 rounded-[2.5rem] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
-                    <div class="w-10 h-10 bg-indigo-50 rounded-xl flex items-center justify-center mb-6 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                    <div class="w-10 h-10 bg-indigo-50 rounded-xl flex items-center justify-center mb-6 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2">{{ $cert['title'] }}</h3>
@@ -133,49 +124,21 @@
 
                 <div x-show="openModal === '{{ $cert['id'] }}'" 
                      class="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md"
-                     x-transition:enter="transition ease-out duration-300"
-                     x-transition:enter-start="opacity-0"
-                     x-transition:enter-end="opacity-100"
-                     x-transition:leave="transition ease-in duration-200"
-                     x-transition:leave-start="opacity-100"
-                     x-transition:leave-end="opacity-0"
                      x-cloak>
-                    <div class="bg-white rounded-[2.5rem] max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row"
-                         @click.away="openModal = null">
-                        
-                        <div class="md:w-1/2 bg-slate-100 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-100">
-                            <img src="{{ asset('images/' . $cert['image']) }}" 
-                                 alt="{{ $cert['title'] }}" 
-                                 class="max-w-full h-auto rounded-lg shadow-lg"
-                                 onerror="this.src='https://via.placeholder.com/600x400?text=Image+Not+Found'">
+                    <div class="bg-white rounded-[2.5rem] max-w-4xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row" @click.away="openModal = null">
+                        <div class="md:w-1/2 bg-slate-100 p-6 flex items-center justify-center">
+                            <img src="{{ asset('images/' . $cert['image']) }}" alt="{{ $cert['title'] }}" class="max-w-full h-auto rounded-lg shadow-lg">
                         </div>
-
                         <div class="md:w-1/2 p-10 relative">
-                            <button @click="openModal = null" class="absolute top-6 right-6 text-slate-400 hover:text-indigo-600 transition-colors">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                            </button>
-
-                            <div class="mb-8">
-                                <h2 class="text-2xl font-bold text-slate-900 leading-tight mb-2">{{ $cert['title'] }}</h2>
-                                <p class="text-slate-500 font-medium">{{ $cert['org'] }} | {{ $cert['year'] }}</p>
-                            </div>
-
+                            <button @click="openModal = null" class="absolute top-6 right-6 text-slate-400 hover:text-indigo-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+                            <h2 class="text-2xl font-bold text-slate-900 mb-2">{{ $cert['title'] }}</h2>
+                            <p class="text-slate-500 mb-8">{{ $cert['org'] }} | {{ $cert['year'] }}</p>
                             <div class="space-y-6">
                                 <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100">
-                                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Deskripsi Singkat</p>
-                                    <p class="text-sm text-slate-700 leading-relaxed italic">"{{ $cert['description'] }}"</p>
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase mb-2">Deskripsi</p>
+                                    <p class="text-sm text-slate-700 italic">"{{ $cert['description'] }}"</p>
                                 </div>
-                                <div>
-                                    <p class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Keahlian:</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        @foreach($cert['skills'] as $skill)
-                                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-[11px] font-bold rounded-lg">{{ $skill }}</span>
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <button @click="openModal = null" class="w-full py-4 bg-indigo-600 text-white rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-500/20">
-                                    Tutup Detail
-                                </button>
+                                <button @click="openModal = null" class="w-full py-4 bg-indigo-600 text-white rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-500/20">Tutup</button>
                             </div>
                         </div>
                     </div>
@@ -191,10 +154,9 @@
                 <h2 class="text-3xl font-bold text-slate-900 mb-4">Teknologi & Instrumen</h2>
                 <div class="w-16 h-1 bg-indigo-600 mx-auto rounded-full"></div>
             </div>
-
             <div class="flex flex-wrap justify-center gap-4">
                 @foreach(['PHP / Laravel', 'JavaScript', 'Python / ML', 'MySQL', 'QA Automation', 'Tailwind CSS', 'Git / GitHub'] as $tech)
-                <div class="px-8 py-4 bg-white border border-slate-100 rounded-2xl font-bold text-slate-700 shadow-sm hover:border-indigo-200 hover:text-indigo-600 hover:shadow-md transition-all duration-300 cursor-default">
+                <div class="px-8 py-4 bg-white border border-slate-100 rounded-2xl font-bold text-slate-700 shadow-sm hover:border-indigo-200 hover:text-indigo-600 transition-all cursor-default">
                     {{ $tech }}
                 </div>
                 @endforeach

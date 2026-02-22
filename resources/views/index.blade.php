@@ -3,7 +3,7 @@
 @section('content')
     <section class="relative overflow-hidden pt-40 pb-24 lg:pt-52 lg:pb-40 bg-slate-900">
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('images/IT.PNG') }}" alt="IT Background" class="w-full h-full object-cover opacity-30">
+            <img src="{{ asset('images/it.png') }}" alt="IT Background" class="w-full h-full object-cover opacity-30">
             <div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-100"></div>
         </div>
 
@@ -51,7 +51,8 @@
                             'tag' => 'Internal System',
                             'desc' => 'Transformasi digital administrasi SDM di Dana Pensiun OJK menggunakan Google Apps Script untuk pengelolaan absensi, cuti, dan surat menyurat secara paperless.',
                             'status' => 'Live',
-                            'img' => '/images/hrd.PNG'
+                            // Asset OJK - Dibungkus helper & huruf kecil
+                            'img' => asset('images/hrd.png')
                         ],
                         [
                             'title' => 'Aplikasi Prediksi Kelahiran', 

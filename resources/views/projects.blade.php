@@ -72,19 +72,20 @@
             img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200",
             content: `
                 <div class="space-y-4 text-slate-600 text-sm leading-relaxed">
-                    <p><strong>The Challenge:</strong> Dalam lingkungan perbankan dengan standar kepatuhan tinggi, tim Quality Assurance seringkali terhambat oleh proses dokumentasi manual yang repetitif. Penyusunan <em>Test Case</em> dan pelaporan bug secara manual memakan waktu administratif yang cukup besar, sehingga memperlambat siklus rilis fitur aplikasi digital.</p>
-                    <p><strong>Technical Solution:</strong> Saya menginisiasi pengembangan <strong>Custom QA Tools</strong> berbasis Google Apps Script dan JavaScript. Sistem ini dirancang untuk menyinkronkan data hasil uji secara real-time. Fitur utama mencakup sinkronisasi log kesalahan otomatis, penomoran dokumen skenario uji yang sistematis, serta integrasi API Drive untuk manajemen bukti uji (screenshot) yang terpusat.</p>
-                    <p><strong>Result:</strong> Implementasi alat ini berhasil memangkas waktu kerja dokumentasi tim QA sebesar <strong>40%</strong>. Dampak nyatanya adalah peningkatan produktivitas tim, percepatan fase <em>regression testing</em>, dan eliminasi risiko <em>human error</em> dalam pencatatan laporan bug di Bank DKI.</p>
+                    <p><strong>The Challenge:</strong> Tim Quality Assurance seringkali terhambat oleh proses dokumentasi manual yang repetitif.</p>
+                    <p><strong>Technical Solution:</strong> Pengembangan Custom QA Tools berbasis Google Apps Script dan JavaScript untuk sinkronisasi data real-time.</p>
+                    <p><strong>Result:</strong> Memangkas waktu kerja dokumentasi sebesar 40% dan eliminasi risiko human error.</p>
                 </div>`
         },
         ojk: {
             title: "Digital Transformation: HRD Internal System (Dapen OJK)",
-            img: "/images/hrd.PNG",
+            // SUDAH DIBUNGKUS ASSET & HURUF KECIL
+            img: "{{ asset('images/hrd.png') }}", 
             content: `
                 <div class="space-y-4 text-slate-600 text-sm leading-relaxed">
-                    <p><strong>The Challenge:</strong> Dana Pensiun OJK memerlukan modernisasi sistem administrasi SDM untuk beralih dari proses konvensional. Dibutuhkan sebuah platform yang mampu mengelola data absensi, pengajuan cuti, dan pembuatan surat resmi secara terintegrasi dan transparan.</p>
-                    <p><strong>Technical Solution:</strong> Saya membangun sistem HRIS (Human Resource Information System) terpusat memanfaatkan ekosistem <strong>Cloud Workspace API</strong>. Solusi ini mencakup pengembangan fitur otomatisasi <em>PDF Generator</em> untuk korespondensi internal, dashboard monitoring sisa cuti pegawai secara real-time, serta arsitektur database pegawai yang terstruktur.</p>
-                    <p><strong>Result:</strong> Sistem ini mewujudkan lingkungan kerja <em>paperless</em> dan meningkatkan efisiensi operasional HRD hingga 50%. Pengelolaan data peserta pensiun menjadi lebih akurat, memudahkan manajemen dalam pengambilan keputusan berbasis data pegawai.</p>
+                    <p><strong>The Challenge:</strong> Modernisasi sistem administrasi SDM dari konvensional ke platform terintegrasi.</p>
+                    <p><strong>Technical Solution:</strong> Membangun HRIS memanfaatkan Cloud Workspace API dan otomatisasi PDF Generator.</p>
+                    <p><strong>Result:</strong> Mewujudkan paperless environment dan meningkatkan efisiensi operasional hingga 50%.</p>
                 </div>`
         },
         skripsi: {
@@ -92,19 +93,20 @@
             img: "https://images.unsplash.com/photo-1527474305487-b87b222841cc?q=80&w=1200",
             content: `
                 <div class="space-y-4 text-slate-600 text-sm leading-relaxed">
-                    <p><strong>The Challenge:</strong> Prediksi angka kelahiran merupakan komponen vital bagi perencanaan infrastruktur nasional. Masalah utamanya adalah menemukan algoritma yang paling presisi dalam menangani fluktuasi data statistik kependudukan yang bersifat non-linear dan musiman.</p>
-                    <p><strong>Technical Solution:</strong> Dalam riset tugas akhir ini, saya menggunakan <strong>Python</strong> untuk membandingkan performa algoritma statistik klasik <strong>Linear Regression</strong> dengan model modern <strong>Facebook Prophet</strong>. Proses teknis melibatkan tahap <em>Data Cleansing</em> yang mendalam, penanganan <em>outlier</em>, serta visualisasi data interaktif untuk memetakan tren kelahiran 10 tahun ke depan.</p>
-                    <p><strong>Result:</strong> Penelitian ini memberikan wawasan mendalam mengenai pemanfaatan Machine Learning untuk kebijakan publik. Proyek ini berkontribusi pada pencapaian akademik saya dengan <strong>IPK 3.91</strong> dan penganugerahan gelar Mahasiswa Berprestasi Akademik di Universitas Gunadarma.</p>
+                    <p><strong>The Challenge:</strong> Menemukan algoritma presisi untuk menangani fluktuasi data statistik kependudukan.</p>
+                    <p><strong>Technical Solution:</strong> Riset komparasi Linear Regression dan Facebook Prophet menggunakan Python.</p>
+                    <p><strong>Result:</strong> Memberikan wawasan mendalam untuk kebijakan publik dan pencapaian akademik IPK 3.91.</p>
                 </div>`
         },
         revou: {
             title: "Full-stack Web Dev: Responsive Shipping Platform",
-            img: "/images/ship.png", // Asset diperbarui sesuai instruksi Anda
+            // SUDAH DIBUNGKUS ASSET & HURUF KECIL
+            img: "{{ asset('images/ship.png') }}", 
             content: `
                 <div class="space-y-4 text-slate-600 text-sm leading-relaxed">
-                    <p><strong>The Challenge:</strong> Membangun platform logistik digital yang responsif dengan fokus pada kecepatan muat halaman dan pengalaman pengguna (User Experience) yang konsisten di berbagai perangkat seluler maupun desktop.</p>
-                    <p><strong>Technical Solution:</strong> Selama program RevoU Tech Academy, saya mengembangkan antarmuka platform pengiriman barang menggunakan <strong>HTML5, CSS3 modern (Grid/Flexbox), dan Vanilla JavaScript</strong>. Saya menerapkan teknik optimasi gambar dan pembersihan script untuk memastikan performa website yang ringan dan aksesibel.</p>
-                    <p><strong>Result:</strong> Berhasil menciptakan simulasi kalkulator ongkos kirim dan sistem validasi formulir yang interaktif. Proyek ini membuktikan kemampuan saya dalam memahami kebutuhan pengguna dan menerjemahkannya ke dalam solusi visual yang fungsional dan estetis.</p>
+                    <p><strong>The Challenge:</strong> Membangun platform logistik digital yang responsif dan ringan.</p>
+                    <p><strong>Technical Solution:</strong> Pengembangan antarmuka menggunakan HTML5, CSS3, dan Vanilla JavaScript selama RevoU Tech Academy.</p>
+                    <p><strong>Result:</strong> Simulasi kalkulator ongkos kirim dan sistem validasi formulir yang interaktif.</p>
                 </div>`
         }
     };
@@ -125,7 +127,7 @@
                     ${data.content}
                 </div>
                 <div class="mt-10 pt-8 border-t border-slate-100">
-                    <button onclick="closeModal()" class="w-full py-4 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-700 shadow-xl shadow-indigo-100 transition-all duration-300">
+                    <button onclick="closeModal()" class="w-full py-4 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-700 transition-all duration-300">
                         Tutup Detail Proyek
                     </button>
                 </div>

@@ -21,8 +21,8 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div class="relative">
-                    <div class="aspect-square bg-indigo-100 rounded-[2rem] overflow-hidden shadow-2xl shadow-indigo-100">
-                        <img src="{{ asset('images/saya.JPG') }}" alt="Gulam Syahrul Muharom" class="w-full h-full object-cover">
+                    <div class="aspect-square bg-indigo-100 rounded-[2rem] overflow-hidden shadow-2xl">
+                        <img src="{{ asset('images/saya.jpg') }}" alt="Gulam Syahrul Muharom" class="w-full h-full object-cover">
                     </div>
                 </div>
 
@@ -35,7 +35,7 @@
                         Berawal dari antusiasme terhadap pengembangan teknologi informasi dan analisis data, saya telah mendalami pengembangan web serta metode penjaminan kualitas aplikasi secara profesional. Saya mengkhususkan diri dalam membangun aplikasi web yang andal sekaligus mengoptimalkan alur kerja melalui otomatisasi.
                     </p>
                     
-                    <div class="bg-indigo-50/50 p-8 rounded-3xl border border-indigo-100 shadow-sm">
+                    <div class="bg-indigo-50/50 p-8 rounded-3xl border border-indigo-100">
                         <p class="font-bold text-slate-900 mb-4 flex items-center">
                             <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             Fokus & Pengalaman Utama:
@@ -71,7 +71,7 @@
                         'title' => 'Student With Best Academic Achievement',
                         'org' => 'Univ. Gunadarma',
                         'year' => '2021',
-                        'image' => 'mapres.PNG',
+                        'image' => 'mapres.png',
                         'description' => 'Penghargaan atas pencapaian akademik terbaik di tingkat universitas pada semester kedua.',
                         'skills' => ['Academic Excellence', 'Public Speaking', 'Analytical Thinking']
                     ],
@@ -80,7 +80,7 @@
                         'title' => 'QA in Software Development Life Cycle',
                         'org' => 'MySkill',
                         'year' => 'Jun 2025',
-                        'image' => 'sdlc.PNG',
+                        'image' => 'sdlc.png', // Sesuai terminal: sdlc.png
                         'description' => 'Sertifikasi profesional mengenai peran dan implementasi QA dalam setiap tahapan pengembangan software (SDLC).',
                         'skills' => ['Quality Assurance', 'SDLC', 'Test Planning']
                     ],
@@ -89,7 +89,7 @@
                         'title' => 'Quality Assurance Fundamental',
                         'org' => 'MySkill',
                         'year' => 'Jun 2025',
-                        'image' => 'fundamental.PNG',
+                        'image' => 'fundamental.png',
                         'description' => 'Pemahaman mendasar mengenai metodologi pengujian, pelaporan bug, dan penjaminan kualitas produk digital.',
                         'skills' => ['Manual Testing', 'Bug Reporting', 'Test Case Design']
                     ],
@@ -98,7 +98,7 @@
                         'title' => 'Data & Software Engineering',
                         'org' => 'RevoU',
                         'year' => 'Des 2023',
-                        'image' => 'revoU.PNG',
+                        'image' => 'revoU.png', 
                         'description' => 'Program intensif yang mencakup pengembangan software modern dan manajemen infrastruktur data.',
                         'skills' => ['HTML', 'CSS', 'Java']
                     ]

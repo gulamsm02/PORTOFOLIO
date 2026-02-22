@@ -14,4 +14,9 @@ putenv("DB_CONNECTION=sqlite");
 putenv("DB_DATABASE=:memory:");
 putenv("VIEW_COMPILED_PATH=$tmpDir/views");
 
+// ... kode mkdir yang lama ...
+
+putenv("ASSET_URL=" . $_ENV['ASSET_URL']); // Paksa ambil dari env Vercel
+putenv("APP_CONFIG_CACHE=/tmp/config.php"); // Hindari cache lama
+
 require __DIR__ . '/../public/index.php';

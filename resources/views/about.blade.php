@@ -20,11 +20,12 @@
     <section class="py-24">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                <div class="relative">
-                    <div class="aspect-square bg-indigo-100 rounded-[2rem] overflow-hidden shadow-2xl">
-                        <img src="{{ asset('images/saya.jpg') }}" alt="Gulam Syahrul Muharom" class="w-full h-full object-cover">
-                    </div>
-                </div>
+  <div class="relative">
+    <img src="{{ asset('images/saya.jpg') }}" 
+         alt="Gulam Syahrul Muharom" 
+         class="w-full rounded-[3rem] shadow-2xl"
+         onerror="this.src='https://via.placeholder.com/500x600?text=Foto+Profil'">
+</div>
 
                 <div>
                     <h2 class="text-3xl font-bold mb-6 italic text-slate-800">

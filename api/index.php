@@ -1,6 +1,5 @@
 <?php
 
-// Paksa Laravel menggunakan folder /tmp untuk cache
 $tmpDir = '/tmp/storage/framework';
 foreach (['/views', '/cache', '/sessions'] as $path) {
     if (!is_dir($tmpDir . $path)) {
@@ -8,8 +7,11 @@ foreach (['/views', '/cache', '/sessions'] as $path) {
     }
 }
 
+// FORCE OVERRIDE - Ini yang paling penting
+putenv("SESSION_DRIVER=cookie");
+putenv("LOG_CHANNEL=stderr");
+putenv("DB_CONNECTION=sqlite");
+putenv("DB_DATABASE=:memory:");
 putenv("VIEW_COMPILED_PATH=$tmpDir/views");
-putenv("APP_CONFIG_CACHE=$tmpDir/cache/config.php");
 
-// Panggil index asli
 require __DIR__ . '/../public/index.php';
